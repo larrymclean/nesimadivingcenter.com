@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nesima Diving Center — Dive sites, PADI courses and pricing in Dahab, Egypt. Blue Hole, Canyon, Eel Garden, Lighthouse Reef. Fun dives from €35.">
+  <meta property="og:title" content="Diving & Prices | Nesima Diving Center Dahab">
+  <meta property="og:description" content="Dive Dahab's legendary sites with Nesima. Fun dives, PADI courses from beginner to Divemaster. Transparent pricing in EUR.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.nesimadivingcenter.com/diving.html">
+  <meta property="og:image" content="https://www.nesimadivingcenter.com/images/hero-reef-1920.jpg">
+  <title>Diving & Prices | Nesima Diving Center — Dahab, Egypt</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Nesima Diving Center",
+    "url": "https://www.nesimadivingcenter.com/",
+    "telephone": "+20 10 08022200",
+    "email": "info@nesimadivingcenter.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "El Masbat St",
+      "addressLocality": "Dahab",
+      "addressRegion": "South Sinai",
+      "postalCode": "46617",
+      "addressCountry": "EG"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 28.4931839, "longitude": 34.5167976 }
+  }
+  </script>
+
+  <style>
+    :root {
+      --nesima-primary:   #0B3C5D;
+      --nesima-deep:      #072F4A;
+      --nesima-light:     #1E6F8F;
+      --nesima-gold:      #D4AF37;
+      --nesima-sand:      #F8F4EF;
+      --nesima-dark:      #0a0f1a;
+    }
+    .bg-deep       { background-color: var(--nesima-deep); }
+    .bg-sand       { background-color: var(--nesima-sand); }
+    .text-deep     { color: var(--nesima-primary); }
+    .text-coral    { color: var(--nesima-gold); }
+    .text-sand     { color: var(--nesima-sand); }
+    body { font-family: 'Poppins', sans-serif; color: var(--nesima-dark); }
+    h1, h2, h3, .headline { font-family: 'Cinzel', serif; }
+    .btn-primary { background-color: var(--nesima-gold); color: #fff; transition: background-color 0.2s; }
+    .btn-primary:hover { background-color: #b8932e; }
+    .social-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 2.25rem; height: 2.25rem; border-radius: 9999px;
+      background-color: var(--nesima-gold); color: #fff; transition: background-color 0.2s;
+    }
+    .social-btn:hover { background-color: #b8932e; }
+
+    /* Site cards */
+    .site-card { transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; }
+    .site-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(7,47,74,0.18); }
+
+    /* Pricing tables */
+    .price-row { border-bottom: 1px solid rgba(7,47,74,0.08); }
+    .price-row:last-child { border-bottom: none; }
+
+    /* Star rating */
+    .star { color: #D4AF37; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); opacity: 0.4; }
+      50%       { transform: translateY(6px); opacity: 0.8; }
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- ── HEADER — Dark Navy (matches index.html) ────────────────────── -->
+  <header style="background-color:#072F4A;" class="shadow-lg sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-6 py-2 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <a href="index.html">
+          <img src="images/nesima-logo.png" alt="Nesima Diving Center" class="h-10"
+               style="filter:brightness(0) invert(1);">
+        </a>
+      </div>
+      <nav class="hidden md:flex items-center gap-4 font-semibold flex-wrap">
+        <a href="index.html#about"   class="text-white hover:text-yellow-300 transition">About</a>
+        <a href="diving.html"        class="text-yellow-300">Diving</a>
+        <a href="index.html#courses" class="text-white hover:text-yellow-300 transition">Courses</a>
+        <a href="index.html#trips"   class="text-white hover:text-yellow-300 transition">Trips</a>
+        <a href="index.html#snorkeling" class="text-white hover:text-yellow-300 transition">Snorkeling</a>
+        <a href="index.html#contact" class="text-white hover:text-yellow-300 transition">Contact</a>
+        <div class="flex items-center gap-2 ml-2">
+          <a href="https://wa.me/201008022200" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-btn">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 3C7.6 3 4 6.47 4 10.76c0 1.48.43 2.86 1.25 4.07L4 21l6.36-1.93c.78.22 1.6.34 2.43.34 4.44 0 8.04-3.47 8.04-7.76C20.83 6.47 16.48 3 12.04 3Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/nesima_divingcenter" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-btn">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="3.5"></circle><circle cx="17" cy="7" r="0.85" fill="currentColor" stroke="none"></circle></svg>
+          </a>
+          <a href="https://www.tiktok.com/@nesima_divingcenter" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-btn">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07Z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61561935453558" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-btn">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 9H15V6h-1.5C10.91 6 9 7.79 9 10.7V12H7v3h2v5h3v-5h2.25L15 12h-3v-1.3c0-.9.42-1.7 1.5-1.7Z"/></svg>
+          </a>
+        </div>
+      </nav>
+      <!-- Hamburger -->
+      <button id="menuBtn" class="md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-md transition"
+              style="background:rgba(255,255,255,0.08);" aria-label="Open menu" onclick="toggleMenu()">
+        <span id="bar1" class="block w-6 h-0.5 transition-all duration-300" style="background:#fff;"></span>
+        <span id="bar2" class="block w-6 h-0.5 transition-all duration-300" style="background:#fff;"></span>
+        <span id="bar3" class="block w-6 h-0.5 transition-all duration-300" style="background:#fff;"></span>
+      </button>
+    </div>
+    <!-- Mobile dropdown -->
+    <div id="mobileMenu" class="md:hidden hidden border-t" style="background:#072F4A;border-color:rgba(255,255,255,0.12);">
+      <div class="px-6 py-4 flex flex-col gap-1">
+        <a href="index.html#about"      onclick="closeMenu()" class="py-3 font-semibold text-white border-b hover:text-yellow-300 transition" style="border-color:rgba(255,255,255,0.10);">About</a>
+        <a href="diving.html"           onclick="closeMenu()" class="py-3 font-semibold text-yellow-300 border-b" style="border-color:rgba(255,255,255,0.10);">Diving</a>
+        <a href="index.html#courses"    onclick="closeMenu()" class="py-3 font-semibold text-white border-b hover:text-yellow-300 transition" style="border-color:rgba(255,255,255,0.10);">Courses</a>
+        <a href="index.html#trips"      onclick="closeMenu()" class="py-3 font-semibold text-white border-b hover:text-yellow-300 transition" style="border-color:rgba(255,255,255,0.10);">Trips</a>
+        <a href="index.html#snorkeling" onclick="closeMenu()" class="py-3 font-semibold text-white border-b hover:text-yellow-300 transition" style="border-color:rgba(255,255,255,0.10);">Snorkeling</a>
+        <a href="index.html#contact"    onclick="closeMenu()" class="py-3 font-semibold text-white border-b hover:text-yellow-300 transition" style="border-color:rgba(255,255,255,0.10);">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ── PAGE HERO ──────────────────────────────────────────────────── -->
+  <section class="relative text-white text-center overflow-hidden" style="min-height:52vh;display:flex;align-items:center;justify-content:center;">
+    <div class="absolute inset-0" style="background-image:url('images/hero-reef-1920.jpg');background-size:cover;background-position:center 30%;"></div>
+    <!-- Vignette -->
+    <div class="absolute inset-0" style="background:radial-gradient(ellipse 85% 75% at 50% 38%,rgba(7,47,74,0) 0%,rgba(7,47,74,0.15) 55%,rgba(4,15,28,0.75) 100%);"></div>
+    <!-- Bottom dark fade matching homepage -->
+    <div class="absolute bottom-0 left-0 right-0" style="height:120px;background:linear-gradient(to bottom,rgba(7,47,74,0) 0%,rgba(4,15,28,0.90) 100%);"></div>
+
+    <div class="relative z-10 px-6 py-16 text-center" style="max-width:700px;margin:0 auto;">
+      <!-- Flame logo — mix-blend-mode:screen removes black bg -->
+      <img src="images/nesima-logo.png"
+           alt="Nesima Diving Center"
+           style="width:clamp(80px,12vw,140px);
+                  margin:0 auto 4px;
+                  display:block;
+                  mix-blend-mode:screen;
+                  filter:brightness(1.2) saturate(1.1);">
+
+      <h1 style="font-family:'Cinzel',serif;
+                 font-size:clamp(30px,5.5vw,62px);
+                 font-weight:500;
+                 color:#D4AF37;
+                 letter-spacing:0.08em;
+                 line-height:1.1;
+                 margin-bottom:8px;
+                 text-shadow:0 2px 24px rgba(0,0,0,0.5);">
+        DIVING IN DAHAB
+      </h1>
+
+      <div style="font-family:'Cinzel',serif;
+                  font-size:clamp(11px,1.6vw,16px);
+                  color:#747272;
+                  letter-spacing:0.35em;
+                  margin-bottom:16px;">
+        DIVE SITES &nbsp;&bull;&nbsp; COURSES &nbsp;&bull;&nbsp; PRICING
+      </div>
+
+      <div style="width:48px;height:1px;background:transparent;margin:0 auto 18px;"></div>
+
+      <p style="font-family:'Poppins',sans-serif;
+                font-size:clamp(13px,1.6vw,17px);
+                font-weight:300;
+                color:rgba(255,255,255,0.75);
+                margin-bottom:28px;">
+        World-class sites. Transparent pricing. Your next dive starts here.
+      </p>
+
+      <a href="#pricing"
+         style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:600;
+                letter-spacing:0.08em;text-transform:uppercase;
+                color:#0a0f1a;background:#D4AF37;
+                padding:12px 32px;border-radius:3px;
+                text-decoration:none;display:inline-block;
+                box-shadow:0 4px 20px rgba(212,175,55,0.35);"
+         onmouseover="this.style.background='#b8932e'"
+         onmouseout="this.style.background='#D4AF37'">
+        See Pricing ↓
+      </a>
+    </div>
+  </section>
+
+  <!-- ── DIVE SITES ─────────────────────────────────────────────────── -->
+  <section id="sites" class="py-16 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-2 text-center text-deep">Dahab's Legendary Sites</h2>
+      <p class="text-lg text-center mb-12 text-gray-600">Shore access from our beachfront location — no boat required for most dives.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Blue Hole -->
+        <article class="site-card bg-sand rounded-xl shadow overflow-hidden">
+          <div style="height:160px;background:linear-gradient(135deg,#072F4A,#1E6F8F);display:flex;align-items:center;justify-content:center;">
+            <div style="font-size:48px;">🔵</div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-bold mb-2 text-deep">Blue Hole</h3>
+            <p class="text-sm text-gray-600 mb-3">The world's most famous dive site — a vertical shaft descending 100m. The saddle at 6m is safe for all levels; the arch is for experienced divers.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs px-2 py-1 rounded-full font-semibold" style="background:#D4AF37;color:#0a0f1a;">6–100m</span>
+              <span class="text-xs px-2 py-1 rounded-full font-semibold bg-white text-gray-700 border border-gray-200">Shore</span>
+              <span class="text-xs px-2 py-1 rounded-full font-semibold bg-white text-gray-700 border border-gray-200">All levels*</span>
+            </div>
+            <a href="https://wa.me/201008022200?text=Hi%20Nesima%2C%20I%27d%20like%20to%20dive%20the%20Blue%20Hole!"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-primary block text-center text-sm font-semibold px-4 py-2 rounded-md">
+              Book This Dive
+            </a>
+          </div>
+        </article>
+
+        <!-- The Canyon -->
+        <article class="site-card bg-sand rounded-xl shadow overflow-hidden">
+          <div style="height:160px;background:linear-gradient(135deg,#0B3C5D,#072F4A);display:flex;align-items:center;justify-content:center;">
+            <div style="font-size:48px;">🏔️</div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-bold mb-2 text-deep">The Canyon</h3>
+            <p class="text-sm text-gray-600 mb-3">A dramatic underwater canyon with swim-throughs, caverns, and dramatic rock formations. One of Dahab's most photogenic dives.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs px-2 py-1 rounded-full font-semibold" style="background:#D4AF37;color:#0a0f1a;">10–52m</span>
+              <span class="text-xs px-2 py-1 rounded-full font-semibold bg-white text-gray-700 border border-gray-200">Shore</span>
+              <span class="text-xs px-2 py-1 rounded-full font-semibold bg-white text-gray-700 border border-gray-200">Advanced</span>
+            </div>
+            <a href="https://wa.me/201008022200?text=Hi%20Nesima%2C%20I%27d%20like%20to%20dive%20the%20Canyon!"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-primary block text-center text-sm font-semibold px-4 py-2 rounded-md">
+              Book This Dive
+            </a>
+          </div>
+        </article>
+
+        <!-- Eel Garden -->
+        <article class="site-card bg-sand rounded-xl shadow overflow-hidden">
+          <div style="height:160px;background:linear-gradient(135deg,#1E6F8F,#0B3C5D);display:flex;align-items:center;justify-content:center;">
+            <div style="font-size:48px;">🐠</div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-bold mb-2 text-deep">Eel Garden</h3>
+            <p class="text-sm text-gray-600 mb-3">A shallow sandy slope carpeted with hundreds of garden eels. Perfect for beginners and macro photography. Gentle conditions year-round.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs px-2 py-1 rounded-full font-semibold" style="background:#D4AF37;color:#0a0f1a;">5–20m</span>
+              <span class="text-xs px-2 py-1 rounded-full font-semibold bg-white text-gray-700 border border-gray-200">Shore</span>
+              <span class="text-xs px-2 py-1 rounded-full font-semibold bg-white text-gray-700 border border-gray-200">Beginner</span>
+            </div>
+            <a href="https://wa.me/201008022200?text=Hi%20Nesima%2C%20I%27d%20like%20to%20dive%20the%20Eel%20Garden!"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-primary block text-center text-sm font-semibold px-4 py-2 rounded-md">
+              Book This Dive
+            </a>
+          </div>
+        </article>
+
+        <!-- Lighthouse Reef -->
+        <article class="site-card bg-sand rounded-xl shadow overflow-hidden">
+          <div style="height:160px;background:linear-gradient(135deg,#072F4A,#1E6F8F);display:flex;align-items:center;justify-content:center;">
+            <div style="font-size:48px;">🪸</div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl font-bold mb-2 text-deep">Lighthouse Reef</h3>
+            <p class="text-sm text-gray-600 mb-3">Nesima's house reef — right in front of our center. Colourful hard corals, turtles, and vibrant fish life. Perfect first dive and night dive site.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs px-2 py-1 rounded-full font-semibold" style="background:#D4AF37;color:#0a0f1a;">3–25m</span>
+              <span class="text-xs px-2 py-1 rounded-full font-semibold bg-white text-gray-700 border border-gray-200">House Reef</span>
+              <span class="text-xs px-2 py-1 rounded-full font-semibold bg-white text-gray-700 border border-gray-200">All levels</span>
+            </div>
+            <a href="https://wa.me/201008022200?text=Hi%20Nesima%2C%20I%27d%20like%20to%20dive%20the%20Lighthouse%20Reef!"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-primary block text-center text-sm font-semibold px-4 py-2 rounded-md">
+              Book This Dive
+            </a>
+          </div>
+        </article>
+
+      </div>
+      <p class="text-sm text-center text-gray-500 mt-6">*Blue Hole saddle suitable for Open Water divers. Arch requires Advanced certification.</p>
+    </div>
+  </section>
+
+  <!-- ── PRICING ────────────────────────────────────────────────────── -->
+  <section id="pricing" class="py-16 px-6 bg-sand">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-2 text-center text-deep">Pricing</h2>
+      <p class="text-lg text-center mb-12 text-gray-600">All prices in EUR. Guided packages require minimum 2 divers.</p>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+
+        <!-- ── Daily Diving Packages ── -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h3 class="text-xl font-bold mb-1 text-deep">Daily Diving Packages</h3>
+          <p class="text-sm text-gray-500 mb-5">Weight &amp; tank included. Full equipment option adds BCD, regulator, wetsuit, mask, fins.</p>
+
+          <!-- Header row -->
+          <div class="grid grid-cols-3 gap-2 mb-2">
+            <div class="text-xs font-semibold uppercase tracking-wide text-gray-500">Dives</div>
+            <div class="text-xs font-semibold uppercase tracking-wide text-gray-500 text-center">Weight &amp; Tank</div>
+            <div class="text-xs font-semibold uppercase tracking-wide text-gray-500 text-center">Full Equipment</div>
+          </div>
+
+          <!-- Price rows -->
+          <div class="space-y-0">
+            <div class="grid grid-cols-3 gap-2 py-3 price-row items-center">
+              <div class="font-medium">1 Dive</div>
+              <div class="text-center font-semibold text-deep">€35</div>
+              <div class="text-center font-semibold text-deep">€45</div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 py-3 price-row items-center">
+              <div class="font-medium">2 Dives</div>
+              <div class="text-center font-semibold text-deep">€60</div>
+              <div class="text-center font-semibold text-deep">€70</div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 py-3 price-row items-center">
+              <div class="font-medium">4 Dives</div>
+              <div class="text-center font-semibold text-deep">€115</div>
+              <div class="text-center font-semibold text-deep">€135</div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 py-3 price-row items-center">
+              <div class="font-medium">6 Dives</div>
+              <div class="text-center font-semibold text-deep">€165</div>
+              <div class="text-center font-semibold text-deep">€195</div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 py-3 price-row items-center">
+              <div class="font-medium">8 Dives</div>
+              <div class="text-center font-semibold text-deep">€215</div>
+              <div class="text-center font-semibold text-deep">€255</div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 py-3 price-row items-center">
+              <div class="font-medium">10 Dives</div>
+              <div class="text-center font-semibold text-deep">€250</div>
+              <div class="text-center font-semibold text-deep">€300</div>
+            </div>
+            <div class="grid grid-cols-3 gap-2 py-3 items-center" style="background:rgba(212,175,55,0.10);border-radius:8px;margin-top:4px;padding-left:8px;padding-right:8px;">
+              <div class="font-bold">20 Dives</div>
+              <div class="text-center font-bold" style="color:#D4AF37;">€470</div>
+              <div class="text-center font-bold" style="color:#D4AF37;">€540</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Supplements + Boat Trips ── -->
+        <div class="space-y-6">
+
+          <!-- Extras -->
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <h3 class="text-xl font-bold mb-4 text-deep">Supplements</h3>
+            <div class="space-y-0">
+              <div class="flex justify-between py-2 price-row text-sm">
+                <span>Private guide (per dive)</span>
+                <span class="font-semibold">+€10</span>
+              </div>
+              <div class="flex justify-between py-2 price-row text-sm">
+                <span>Early morning diving</span>
+                <span class="font-semibold">+€5</span>
+              </div>
+              <div class="flex justify-between py-2 price-row text-sm">
+                <span>Reactivation / Check dive</span>
+                <span class="font-semibold">+€5</span>
+              </div>
+              <div class="flex justify-between py-2 price-row text-sm">
+                <span>Night dive</span>
+                <span class="font-semibold">+€5</span>
+              </div>
+              <div class="flex justify-between py-2 price-row text-sm">
+                <span>Nitrox 32% — 12L</span>
+                <span class="font-semibold">+€5</span>
+              </div>
+              <div class="flex justify-between py-2 price-row text-sm">
+                <span>Nitrox 32% — 15L</span>
+                <span class="font-semibold">+€6</span>
+              </div>
+              <div class="flex justify-between py-2 price-row text-sm">
+                <span>15L tank upgrade</span>
+                <span class="font-semibold">+€3</span>
+              </div>
+              <div class="flex justify-between py-2 price-row text-sm">
+                <span>Private transportation (per day)</span>
+                <span class="font-semibold">+€10</span>
+              </div>
+              <div class="flex justify-between py-2 text-sm">
+                <span>Blue Hole National Park fee (per day)</span>
+                <span class="font-semibold">€20</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boat Trips -->
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <h3 class="text-xl font-bold mb-4 text-deep">Boat Day Trips</h3>
+            <div class="space-y-0">
+              <div class="flex justify-between py-2 price-row text-sm">
+                <div>
+                  <div class="font-medium">Gabr El Bent</div>
+                  <div class="text-xs text-gray-500">Full day trip</div>
+                </div>
+                <span class="font-semibold">€60</span>
+              </div>
+              <div class="flex justify-between py-2 price-row text-sm">
+                <div>
+                  <div class="font-medium">Ras Abu Galum</div>
+                  <div class="text-xs text-gray-500">Full day trip</div>
+                </div>
+                <span class="font-semibold">€60</span>
+              </div>
+              <div class="flex justify-between py-2 text-sm">
+                <div>
+                  <div class="font-medium">SS Thistlegorm</div>
+                  <div class="text-xs text-gray-500">Red Sea's most famous wreck</div>
+                </div>
+                <a href="https://wa.me/201008022200?text=Hi%20Nesima%2C%20I%27d%20like%20to%20ask%20about%20the%20Thistlegorm%20trip!"
+                   target="_blank" class="font-semibold text-xs px-3 py-1 rounded-md" style="background:#D4AF37;color:#0a0f1a;white-space:nowrap;">
+                  Ask Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing CTA strip -->
+      <div class="rounded-xl p-6 mb-8 text-center" style="background:linear-gradient(135deg,#072F4A,#0B3C5D);">
+        <p style="font-family:'Cinzel',serif;font-size:18px;color:#D4AF37;margin-bottom:6px;">Ready to Book Your Dives?</p>
+        <p style="font-family:'Poppins',sans-serif;font-size:14px;color:rgba(255,255,255,0.70);margin-bottom:16px;">Message us on WhatsApp — we'll confirm your dates within the hour.</p>
+        <a href="https://wa.me/201008022200?text=Hi%20Nesima%2C%20I%27d%20like%20to%20book%20a%20dive%20package!"
+           target="_blank" rel="noopener noreferrer"
+           style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#0a0f1a;background:#D4AF37;padding:12px 32px;border-radius:3px;text-decoration:none;display:inline-block;"
+           onmouseover="this.style.background='#b8932e'" onmouseout="this.style.background='#D4AF37'">
+          📅 Book My Package on WhatsApp
+        </a>
+      </div>
+
+      <!-- ── PADI Courses ── -->
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h3 class="text-xl font-bold mb-1 text-deep">PADI Courses</h3>
+          <p class="text-xs text-gray-500 mb-5">All course prices include full dive gear, dive computer, eLearning &amp; certification card.</p>
+          <div class="space-y-0">
+            <div class="flex justify-between py-2 price-row text-sm">
+              <div><div class="font-medium">Intro Dive</div></div>
+              <span class="font-semibold">€35</span>
+            </div>
+            <div class="flex justify-between py-2 price-row text-sm">
+              <div><div class="font-medium">Discover Scuba Diving</div><div class="text-xs text-gray-500">2 dives</div></div>
+              <span class="font-semibold">€80</span>
+            </div>
+            <div class="flex justify-between py-2 price-row text-sm">
+              <div><div class="font-medium">Scuba Diver</div><div class="text-xs text-gray-500">2 days</div></div>
+              <span class="font-semibold">€250</span>
+            </div>
+            <div class="flex justify-between py-2 price-row text-sm">
+              <div><div class="font-medium">Open Water Diver</div><div class="text-xs text-gray-500">3–4 days</div></div>
+              <span class="font-semibold">€350</span>
+            </div>
+            <div class="flex justify-between py-2 price-row text-sm">
+              <div><div class="font-medium">Advanced Open Water</div><div class="text-xs text-gray-500">2 days</div></div>
+              <span class="font-semibold">€300</span>
+            </div>
+            <div class="flex justify-between py-2 price-row text-sm">
+              <div><div class="font-medium">Adventure Dive</div><div class="text-xs text-gray-500">1 dive</div></div>
+              <span class="font-semibold">€55</span>
+            </div>
+            <div class="flex justify-between py-2 price-row text-sm">
+              <div><div class="font-medium">Emergency First Response</div><div class="text-xs text-gray-500">1 day, dry course</div></div>
+              <span class="font-semibold">€120</span>
+            </div>
+            <div class="flex justify-between py-2 price-row text-sm">
+              <div><div class="font-medium">Rescue Diver</div><div class="text-xs text-gray-500">2–3 days</div></div>
+              <span class="font-semibold">€350</span>
+            </div>
+            <div class="flex justify-between py-2 text-sm items-center">
+              <div><div class="font-bold">Divemaster</div><div class="text-xs text-gray-500">1 month intensive</div></div>
+              <span class="font-bold text-lg" style="color:#D4AF37;">€800</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialty + Equipment Rental -->
+        <div class="space-y-6">
+
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <h3 class="text-xl font-bold mb-4 text-deep">Specialty Courses</h3>
+            <div class="space-y-0">
+              <div class="flex justify-between py-2 price-row text-sm">
+                <div><div class="font-medium">Deep Diver</div><div class="text-xs text-gray-500">2 days</div></div>
+                <span class="font-semibold">€200</span>
+              </div>
+              <div class="flex justify-between py-2 price-row text-sm">
+                <div><div class="font-medium">Nitrox Diver</div><div class="text-xs text-gray-500">Dry course</div></div>
+                <span class="font-semibold">€120</span>
+              </div>
+              <div class="flex justify-between py-2 price-row text-sm">
+                <div><div class="font-medium">Night Diver</div><div class="text-xs text-gray-500">2 dives, 2 days</div></div>
+                <span class="font-semibold">€150</span>
+              </div>
+              <div class="flex justify-between py-2 price-row text-sm">
+                <div><div class="font-medium">Wreck Diver</div><div class="text-xs text-gray-500">4 dives, 2 days</div></div>
+                <span class="font-semibold">€200</span>
+              </div>
+              <div class="flex justify-between py-2 text-sm">
+                <div><div class="font-medium">Peak Performance Buoyancy</div><div class="text-xs text-gray-500">2 dives, 1 day</div></div>
+                <span class="font-semibold">€150</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <h3 class="text-xl font-bold mb-4 text-deep">Equipment Rental</h3>
+            <p class="text-xs text-gray-500 mb-3">Per day rates</p>
+            <div class="grid grid-cols-2 gap-x-6 gap-y-1 text-sm">
+              <div class="flex justify-between py-1 border-b border-gray-100"><span>Mask</span><span class="font-medium">€2</span></div>
+              <div class="flex justify-between py-1 border-b border-gray-100"><span>Fins</span><span class="font-medium">€3</span></div>
+              <div class="flex justify-between py-1 border-b border-gray-100"><span>Booties</span><span class="font-medium">€2</span></div>
+              <div class="flex justify-between py-1 border-b border-gray-100"><span>Snorkel</span><span class="font-medium">€1</span></div>
+              <div class="flex justify-between py-1 border-b border-gray-100"><span>Wetsuit (half)</span><span class="font-medium">€8</span></div>
+              <div class="flex justify-between py-1 border-b border-gray-100"><span>Wetsuit (full)</span><span class="font-medium">€5</span></div>
+              <div class="flex justify-between py-1 border-b border-gray-100"><span>BCD</span><span class="font-medium">€5</span></div>
+              <div class="flex justify-between py-1 border-b border-gray-100"><span>Regulator</span><span class="font-medium">€5</span></div>
+              <div class="flex justify-between py-1 border-b border-gray-100"><span>Computer</span><span class="font-medium">€5</span></div>
+              <div class="flex justify-between py-1 border-b border-gray-100"><span>Torch</span><span class="font-medium">€5</span></div>
+              <div class="flex justify-between py-1 border-b border-gray-100"><span>Compass</span><span class="font-medium">€5</span></div>
+              <div class="flex justify-between py-1 font-bold" style="color:#D4AF37;"><span>Full Equipment</span><span>€10</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Booking notes -->
+      <div class="bg-white rounded-xl p-6 max-w-3xl mx-auto text-sm text-gray-600 space-y-2 shadow-sm">
+        <p>✓ &nbsp;<strong>Guided packages</strong> are per person based on minimum 2 divers. Solo divers pay a private guide supplement of +€10/dive.</p>
+        <p>✓ &nbsp;<strong>Booking:</strong> Please confirm at least 24 hours in advance via WhatsApp or the contact form.</p>
+        <p>✓ &nbsp;<strong>Payment:</strong> Cash or bank transfer accepted.</p>
+        <p>✓ &nbsp;<strong>Safety:</strong> All dives subject to weather and sea conditions.</p>
+      </div>
+
+      <!-- Course enrol CTA -->
+      <div class="rounded-xl p-6 mt-10 text-center" style="background:#F8F4EF;border:1px solid rgba(7,47,74,0.10);">
+        <p style="font-family:'Cinzel',serif;font-size:18px;color:#0B3C5D;margin-bottom:6px;">Start Your PADI Journey</p>
+        <p style="font-family:'Poppins',sans-serif;font-size:14px;color:#555;margin-bottom:16px;">Tell us your experience level and which course interests you — we'll take care of the rest.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href="https://wa.me/201008022200?text=Hi%20Nesima%2C%20I%27d%20like%20to%20enrol%20in%20a%20PADI%20course!"
+             target="_blank" rel="noopener noreferrer"
+             style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#0a0f1a;background:#D4AF37;padding:12px 28px;border-radius:3px;text-decoration:none;display:inline-block;"
+             onmouseover="this.style.background='#b8932e'" onmouseout="this.style.background='#D4AF37'">
+            Enrol via WhatsApp
+          </a>
+          <a href="index.html#contact"
+             style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:#0B3C5D;border:2px solid #0B3C5D;padding:12px 28px;border-radius:3px;text-decoration:none;display:inline-block;"
+             onmouseover="this.style.background='#0B3C5D';this.style.color='#fff'"
+             onmouseout="this.style.background='transparent';this.style.color='#0B3C5D'">
+            Send a Message
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── GOOGLE RATING ──────────────────────────────────────────────── -->
+  <section class="py-14 px-6 bg-white">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-2xl font-semibold mb-8 text-deep">What Our Divers Say</h2>
+
+      <!-- Google rating badge -->
+      <div class="inline-block bg-white rounded-2xl shadow-lg px-8 py-6 mb-8" style="border:1px solid rgba(7,47,74,0.10);">
+        <div class="flex items-center justify-center gap-3 mb-3">
+          <!-- Google G logo SVG -->
+          <svg width="28" height="28" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.36-8.16 2.36-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+          </svg>
+          <span style="font-family:'Poppins',sans-serif;font-size:18px;font-weight:600;color:#0a0f1a;">Google Reviews</span>
+        </div>
+        <div class="flex items-center justify-center gap-2 mb-2">
+          <span class="star text-3xl">★★★★★</span>
+        </div>
+        <p class="text-sm text-gray-500 mb-4">Nesima Diving Center · Dahab, Egypt</p>
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJl06BANZLqxURqOMU0tZfphI"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-primary inline-block px-6 py-2 rounded-md text-sm font-semibold">
+          Read Our Reviews on Google
+        </a>
+      </div>
+
+      <!-- Leave a review CTA -->
+      <div>
+        <p class="text-gray-600 mb-3">Dived with us recently? We'd love to hear about your experience.</p>
+        <a href="https://search.google.com/local/writereview?placeid=ChIJl06BANZLqxURqOMU0tZfphI"
+           target="_blank" rel="noopener noreferrer"
+           style="font-family:'Poppins',sans-serif;font-size:14px;font-weight:600;color:#0B3C5D;border:2px solid #0B3C5D;padding:10px 28px;border-radius:4px;text-decoration:none;display:inline-block;transition:all 0.2s;"
+           onmouseover="this.style.background='#0B3C5D';this.style.color='#fff'"
+           onmouseout="this.style.background='transparent';this.style.color='#0B3C5D'">
+          ✍️ Leave a Google Review
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BOOK CTA ───────────────────────────────────────────────────── -->
+  <section class="py-16 px-6" style="background:#072F4A;">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 style="font-family:'Cinzel',serif;font-size:clamp(24px,4vw,40px);color:#D4AF37;margin-bottom:12px;">
+        Ready to Dive Dahab?
+      </h2>
+      <p style="font-family:'Poppins',sans-serif;color:rgba(255,255,255,0.75);font-size:16px;margin-bottom:32px;">
+        Tell us your experience level and dates — we'll put together the perfect package.
+      </p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://wa.me/201008022200?text=Hi%20Nesima%2C%20I%27d%20like%20to%20book%20a%20dive!"
+           target="_blank" rel="noopener noreferrer"
+           style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#0a0f1a;background:#D4AF37;padding:14px 36px;border-radius:3px;text-decoration:none;display:inline-block;"
+           onmouseover="this.style.background='#b8932e'" onmouseout="this.style.background='#D4AF37'">
+          Book via WhatsApp
+        </a>
+        <a href="index.html#contact"
+           style="font-family:'Poppins',sans-serif;font-size:15px;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.85);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.28);padding:14px 36px;border-radius:3px;text-decoration:none;display:inline-block;"
+           onmouseover="this.style.background='rgba(255,255,255,0.18)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">
+          Send a Message
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────── -->
+  <footer class="bg-deep text-white py-8 text-sm">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <div class="font-bold text-lg mb-1" style="font-family:'Cinzel',serif;">Nesima Diving Center</div>
+        <p class="opacity-70">El Masbat St, Dahab, South Sinai, Egypt</p>
+        <p class="opacity-70 mt-1">PADI 5-Star Gold Palm Resort · CDWS Accredited</p>
+        <p class="opacity-50 text-xs mt-2">Powered by AQUORIX &mdash; &copy; 2026 Nesima Diving Center. All rights reserved.</p>
+      </div>
+      <div class="flex flex-col items-center gap-3">
+        <span class="text-xs uppercase tracking-wide opacity-60">Follow Us</span>
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/nesima_divingcenter" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-white border-opacity-30 hover:bg-white hover:text-deep transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="4" width="16" height="16" rx="5"></rect><circle cx="12" cy="12" r="3.5"></circle><circle cx="17" cy="7" r="0.85" fill="currentColor" stroke="none"></circle></svg></a>
+          <a href="https://www.tiktok.com/@nesima_divingcenter" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-white border-opacity-30 hover:bg-white hover:text-deep transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07Z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61561935453558" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-white border-opacity-30 hover:bg-white hover:text-deep transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 9H15V6h-1.5C10.91 6 9 7.79 9 10.7V12H7v3h2v5h3v-5h2.25L15 12h-3v-1.3c0-.9.42-1.7 1.5-1.7Z"/></svg></a>
+          <a href="https://wa.me/201008022200" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="inline-flex items-center justify-center w-9 h-9 rounded-full border border-white border-opacity-30 hover:bg-white hover:text-deep transition"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 3C7.6 3 4 6.47 4 10.76c0 1.48.43 2.86 1.25 4.07L4 21l6.36-1.93c.78.22 1.6.34 2.43.34 4.44 0 8.04-3.47 8.04-7.76C20.83 6.47 16.48 3 12.04 3Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── STICKY MOBILE WHATSAPP BAR ────────────────────────────────── -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 px-4 pb-4 pt-2"
+       style="background:linear-gradient(to top,rgba(7,47,74,0.95),rgba(7,47,74,0.80));backdrop-filter:blur(8px);">
+    <a href="https://wa.me/201008022200?text=Hi%20Nesima%2C%20I%27d%20like%20to%20book%20a%20dive!"
+       target="_blank" rel="noopener noreferrer"
+       style="display:flex;align-items:center;justify-content:center;gap:10px;
+              background:#D4AF37;color:#0a0f1a;
+              font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;
+              letter-spacing:0.06em;text-transform:uppercase;
+              padding:14px;border-radius:4px;text-decoration:none;width:100%;">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 3C7.6 3 4 6.47 4 10.76c0 1.48.43 2.86 1.25 4.07L4 21l6.36-1.93c.78.22 1.6.34 2.43.34 4.44 0 8.04-3.47 8.04-7.76C20.83 6.47 16.48 3 12.04 3Z"/></svg>
+      Book a Dive
+    </a>
+  </div>
+  <!-- bottom padding so sticky bar doesn't overlap content on mobile -->
+  <div class="md:hidden" style="height:80px;"></div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const bar1 = document.getElementById('bar1');
+      const bar2 = document.getElementById('bar2');
+      const bar3 = document.getElementById('bar3');
+      const isOpen = !menu.classList.contains('hidden');
+      if (isOpen) {
+        menu.classList.add('hidden');
+        bar1.style.transform = 'none'; bar2.style.opacity = '1'; bar3.style.transform = 'none';
+      } else {
+        menu.classList.remove('hidden');
+        bar1.style.transform = 'translateY(8px) rotate(45deg)';
+        bar2.style.opacity = '0';
+        bar3.style.transform = 'translateY(-8px) rotate(-45deg)';
+      }
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.add('hidden');
+      document.getElementById('bar1').style.transform = 'none';
+      document.getElementById('bar2').style.opacity = '1';
+      document.getElementById('bar3').style.transform = 'none';
+    }
+  </script>
+</body>
+</html>
