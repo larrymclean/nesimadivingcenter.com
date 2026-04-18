@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet the team behind Nesima Diving Center — Dahab's PADI 5-Star Gold Palm Resort since the early 1990s. Our story, our instructors, our safety standards.">
+  <meta property="og:title" content="About Us | Nesima Diving Center — Dahab, Egypt">
+  <meta property="og:description" content="30+ years diving Dahab. Meet our multilingual PADI instructors and learn what makes Nesima one of the Red Sea's most trusted dive centers.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.nesimadivingcenter.com/about.html">
+  <meta property="og:image" content="https://www.nesimadivingcenter.com/images/about-nesima.jpg">
+  <title>About Us | Nesima Diving Center — Dahab, Egypt</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Nesima Diving Center",
+    "url": "https://www.nesimadivingcenter.com/",
+    "telephone": "+20 10 08022200",
+    "email": "info@nesimadivingcenter.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "El Masbat St",
+      "addressLocality": "Dahab",
+      "addressRegion": "South Sinai",
+      "postalCode": "46617",
+      "addressCountry": "EG"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --nesima-primary:   #0B3C5D;
+      --nesima-deep:      #072F4A;
+      --nesima-light:     #1E6F8F;
+      --nesima-gold:      #D4AF37;
+      --nesima-sand:      #F8F4EF;
+      --nesima-dark:      #0a0f1a;
+    }
+    .bg-deep       { background-color: var(--nesima-deep); }
+    .bg-sand       { background-color: var(--nesima-sand); }
+    .text-deep     { color: var(--nesima-primary); }
+    .text-gold     { color: var(--nesima-gold); }
+    .text-sand     { color: var(--nesima-sand); }
+    body { font-family: 'Poppins', sans-serif; color: var(--nesima-dark); }
+    h1, h2, h3, .headline { font-family: 'Cinzel', serif; }
+
+    /* ── HEADER ─────────────────────────────────────────────────── */
+    .site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      transition: background 0.35s, box-shadow 0.35s;
+      background: transparent;
+    }
+    .site-header.scrolled {
+      background: rgba(7,47,74,0.97);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    }
+    .nav-link {
+      font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.8);
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--nesima-gold); }
+
+    /* ── TEAM CARDS ──────────────────────────────────────────────── */
+    .team-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.14);
+    }
+    .team-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    .team-card .card-body {
+      padding: 20px 24px 24px;
+    }
+    .team-card .card-name {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--nesima-primary);
+      margin-bottom: 2px;
+    }
+    .team-card .card-role {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--nesima-gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .team-card .card-bio {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* ── OWNER FEATURED CARD ────────────────────────────────────── */
+    .owner-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      border: 2px solid rgba(212,175,55,0.25);
+    }
+    .owner-card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      object-position: center 15%;
+    }
+    .owner-card .card-body {
+      padding: 28px 32px 32px;
+    }
+    .owner-card .card-name {
+      font-family: 'Cinzel', serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: var(--nesima-primary);
+      margin-bottom: 4px;
+    }
+    .owner-card .card-role {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--nesima-gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .owner-card .card-bio {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    /* ── STATS BAR ──────────────────────────────────────────────── */
+    .stat-item { text-align: center; }
+    .stat-number {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: var(--nesima-gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    /* ── TESTIMONIALS ───────────────────────────────────────────── */
+    .testi-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-left: 4px solid var(--nesima-gold);
+    }
+    .testi-quote { font-size: 15px; line-height: 1.7; color: #444; font-style: italic; margin-bottom: 12px; }
+    .testi-name { font-size: 13px; font-weight: 600; color: var(--nesima-primary); }
+    .stars { color: var(--nesima-gold); font-size: 16px; margin-bottom: 10px; letter-spacing: 2px; }
+
+    /* ── CTA ─────────────────────────────────────────────────────── */
+    .btn-gold {
+      display: inline-block; padding: 14px 36px;
+      background: var(--nesima-gold); color: #fff;
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 14px;
+      border-radius: 6px; letter-spacing: 0.06em;
+      text-decoration: none; transition: background 0.2s, transform 0.2s;
+    }
+    .btn-gold:hover { background: #c9a030; transform: translateY(-2px); }
+    .btn-ghost {
+      display: inline-block; padding: 14px 36px;
+      border: 2px solid rgba(255,255,255,0.4); color: #fff;
+      font-family: 'Poppins', sans-serif; font-weight: 500; font-size: 14px;
+      border-radius: 6px; letter-spacing: 0.06em;
+      text-decoration: none; transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--nesima-gold); color: var(--nesima-gold); }
+
+    /* ── CREDENTIAL BADGES ──────────────────────────────────────── */
+    .cred-badge {
+      text-align: center; padding: 24px;
+      border: 1px solid rgba(11,60,93,0.1);
+      border-radius: 12px;
+      transition: box-shadow 0.2s;
+    }
+    .cred-badge:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+    .cred-icon { font-size: 36px; margin-bottom: 10px; }
+    .cred-title { font-family: 'Cinzel', serif; font-size: 16px; font-weight: 500; color: var(--nesima-primary); margin-bottom: 4px; }
+    .cred-sub { font-size: 13px; color: #777; }
+
+    /* ── FOOTER ──────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--nesima-deep);
+      color: rgba(255,255,255,0.55);
+      padding: 48px 24px 32px;
+      font-size: 13px;
+    }
+    .footer-brand {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      color: var(--nesima-gold);
+      margin-bottom: 6px;
+    }
+
+    /* ── MOBILE MENU ────────────────────────────────────────────── */
+    .mobile-menu { display: none; }
+    .mobile-menu.open { display: flex; flex-direction: column; }
+    @media (max-width: 768px) {
+      .team-card img { height: 280px; }
+      .owner-card img { height: 340px; }
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- ── HEADER ──────────────────────────────────────────────────── -->
+  <header id="siteHeader" class="site-header">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/nesima-logo.png" alt="Nesima Diving Center" style="height:42px;filter:brightness(1.15);">
+      </a>
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="index.html#about" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link" style="color:var(--nesima-gold);">About</a>
+        <a href="diving.html" class="nav-link">Diving</a>
+        <a href="index.html#courses" class="nav-link">Courses</a>
+        <a href="index.html#trips" class="nav-link">Trips</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <button onclick="toggleMenu()" class="md:hidden text-white text-2xl focus:outline-none">☰</button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu md:hidden px-6 pb-4 bg-deep">
+      <a href="index.html" onclick="closeMenu()" class="py-3 font-semibold text-white border-b hover:text-yellow-300 transition" style="border-color:rgba(255,255,255,0.10);">Home</a>
+      <a href="about.html" onclick="closeMenu()" class="py-3 font-semibold text-yellow-300 border-b transition" style="border-color:rgba(255,255,255,0.10);">About</a>
+      <a href="diving.html" onclick="closeMenu()" class="py-3 font-semibold text-white border-b hover:text-yellow-300 transition" style="border-color:rgba(255,255,255,0.10);">Diving</a>
+      <a href="index.html#courses" onclick="closeMenu()" class="py-3 font-semibold text-white border-b hover:text-yellow-300 transition" style="border-color:rgba(255,255,255,0.10);">Courses</a>
+      <a href="index.html#trips" onclick="closeMenu()" class="py-3 font-semibold text-white border-b hover:text-yellow-300 transition" style="border-color:rgba(255,255,255,0.10);">Trips</a>
+      <a href="index.html#contact" onclick="closeMenu()" class="py-3 font-semibold text-white border-b hover:text-yellow-300 transition" style="border-color:rgba(255,255,255,0.10);">Contact</a>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ── HERO ───────────────────────────────────────────────────── -->
+  <section class="relative text-white text-center overflow-hidden" style="min-height:52vh;display:flex;align-items:center;justify-content:center;">
+    <div class="absolute inset-0" style="background-image:url('images/about-nesima.jpg');background-size:cover;background-position:center 30%;"></div>
+    <div class="absolute inset-0" style="background:radial-gradient(ellipse 85% 75% at 50% 38%,rgba(7,47,74,0) 0%,rgba(7,47,74,0.20) 55%,rgba(4,15,28,0.80) 100%);"></div>
+    <div class="absolute bottom-0 left-0 right-0" style="height:120px;background:linear-gradient(to bottom,rgba(7,47,74,0) 0%,rgba(4,15,28,0.90) 100%);"></div>
+    <div class="relative z-10 px-6 py-16 text-center" style="max-width:700px;margin:0 auto;">
+      <img src="images/nesima-logo.png" alt="Nesima Diving Center"
+           style="width:clamp(80px,12vw,130px);margin:0 auto 8px;display:block;mix-blend-mode:screen;filter:brightness(1.2) saturate(1.1);">
+      <h1 style="font-family:'Cinzel',serif;font-size:clamp(30px,5.5vw,60px);font-weight:500;color:#D4AF37;letter-spacing:0.08em;line-height:1.1;margin-bottom:8px;text-shadow:0 2px 24px rgba(0,0,0,0.5);">
+        OUR STORY
+      </h1>
+      <div style="font-family:'Cinzel',serif;font-size:clamp(11px,1.6vw,15px);color:#747272;letter-spacing:0.35em;margin-bottom:16px;">
+        DAHAB &nbsp;&bull;&nbsp; RED SEA &nbsp;&bull;&nbsp; SINCE THE 1990S
+      </div>
+      <p style="font-family:'Poppins',sans-serif;font-size:clamp(13px,1.6vw,17px);font-weight:300;color:rgba(255,255,255,0.75);">
+        Three decades of passion, professionalism, and the perfect dive.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── THE WHY / OUR STORY ───────────────────────────────────── -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-semibold mb-5 text-deep">Born from a Love of the Sea</h2>
+        <p class="text-lg mb-4 text-gray-700">Nesima Diving Center was founded in the early 1990s by divers who fell so deeply in love with Dahab's underwater world that they never left. What began as a small beach operation grew into one of the Red Sea's most respected dive centers — built on one unshakeable belief: every person deserves to experience the ocean.</p>
+        <p class="text-lg mb-4 text-gray-700">We have guided first-time breathers and seasoned technical divers alike. We have watched nervous beginners transform into confident open water divers over the course of a single week.</p>
+        <p class="text-lg text-gray-700">Three decades later, the feeling is still the same: every morning we look out at the Red Sea and know we're exactly where we're supposed to be.</p>
+      </div>
+      <div style="border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.12);">
+        <img src="images/about-nesima.jpg" alt="Nesima Diving Center beachfront" style="width:100%;height:auto;display:block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TRUST STATS ───────────────────────────────────────────── -->
+  <section class="bg-deep py-14 px-6">
+    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="stat-item">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Years in Dahab</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15</div>
+        <div class="stat-label">PADI Instructors</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">140</div>
+        <div class="stat-label">Tanks Ready</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5★</div>
+        <div class="stat-label">PADI Gold Palm</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MEET THE TEAM ─────────────────────────────────────────── -->
+  <section class="bg-sand py-16 px-6" id="team">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-semibold text-deep mb-4">Meet the Team</h2>
+        <p class="text-lg text-gray-600" style="max-width:600px;margin:0 auto;">The people who make every dive safe, every course unforgettable, and every guest feel at home.</p>
+      </div>
+
+      <!-- OWNER — Featured -->
+      <div class="max-w-2xl mx-auto mb-14">
+        <div class="owner-card">
+          <img src="images/ramy.jpg" alt="Ramy — Owner, Nesima Diving Center">
+          <div class="card-body">
+            <div class="card-name">Ramy</div>
+            <div class="card-role">Owner</div>
+            <p class="card-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSTRUCTORS / DIVEMASTERS -->
+      <div class="text-center mb-8">
+        <div style="font-family:'Cinzel',serif;font-size:14px;font-weight:500;color:var(--nesima-gold);letter-spacing:0.2em;text-transform:uppercase;">Instructors &amp; Divemasters</div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-14">
+        <div class="team-card">
+          <img src="images/mohamed-nady.jpg" alt="Mohamed Nady — Instructor / Divemaster">
+          <div class="card-body">
+            <div class="card-name">Mohamed Nady</div>
+            <div class="card-role">Instructor / Divemaster</div>
+            <p class="card-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="images/lee.jpg" alt="Lee — Instructor / Divemaster">
+          <div class="card-body">
+            <div class="card-name">Lee</div>
+            <div class="card-role">Instructor / Divemaster</div>
+            <p class="card-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHOP STAFF -->
+      <div class="text-center mb-8">
+        <div style="font-family:'Cinzel',serif;font-size:14px;font-weight:500;color:var(--nesima-gold);letter-spacing:0.2em;text-transform:uppercase;">Dive Center Staff</div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="team-card">
+          <img src="images/ahmed-nady.jpg" alt="Ahmed Nady — Dive Center Staff">
+          <div class="card-body">
+            <div class="card-name">Ahmed Nady</div>
+            <div class="card-role">Dive Center Staff</div>
+            <p class="card-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="images/ishak.jpg" alt="Ishak — Dive Center Staff">
+          <div class="card-body">
+            <div class="card-name">Ishak</div>
+            <div class="card-role">Dive Center Staff</div>
+            <p class="card-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="images/rayan.jpg" alt="Rayan — Dive Center Staff">
+          <div class="card-body">
+            <div class="card-name">Rayan</div>
+            <div class="card-role">Dive Center Staff</div>
+            <p class="card-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SAFETY & CREDENTIALS ──────────────────────────────────── -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-semibold text-deep mb-4">Safety &amp; Credentials</h2>
+        <p class="text-lg text-gray-600" style="max-width:550px;margin:0 auto;">Your safety is not negotiable. It is the foundation of every dive, every course, every day.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="cred-badge">
+          <div class="cred-icon">⭐</div>
+          <div class="cred-title">PADI 5-Star</div>
+          <div class="cred-sub">Gold Palm Resort</div>
+        </div>
+        <div class="cred-badge">
+          <div class="cred-icon">✅</div>
+          <div class="cred-title">CDWS</div>
+          <div class="cred-sub">Accredited Member</div>
+        </div>
+        <div class="cred-badge">
+          <div class="cred-icon">🫁</div>
+          <div class="cred-title">Oxygen &amp; First Aid</div>
+          <div class="cred-sub">On every dive</div>
+        </div>
+        <div class="cred-badge">
+          <div class="cred-icon">🔧</div>
+          <div class="cred-title">Bauer Compressors</div>
+          <div class="cred-sub">V7.5 &amp; V20</div>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <p class="text-gray-600" style="max-width:650px;margin:0 auto;">50 full sets of Scubapro and Mares equipment. 140 tanks. Individual guest storage lockers. Four 4WD vehicles with mobile phones. Spare equipment, first aid, and oxygen on every dive — no exceptions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DAHAB LOCAL EXPERTISE ─────────────────────────────────── -->
+  <section class="bg-sand py-16 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-semibold mb-5 text-deep">Dahab Is Home</h2>
+        <p class="text-lg mb-4 text-gray-700">We don't just work in Dahab — we live here. Our team knows every dive site, every current pattern, every season. We know which sites are best on a north wind and which ones light up at sunset.</p>
+        <p class="text-lg mb-4 text-gray-700">That local knowledge is the difference between a good dive and the dive of your life. It's why our guides take groups of 4, not 12. It's why we choose the site based on conditions, not convenience.</p>
+        <p class="text-lg text-gray-700">Dahab is not just a destination. For us, it's everything.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div style="border-radius:10px;overflow:hidden;"><img src="images/site-blue-hole.jpg" alt="Blue Hole Dahab" style="width:100%;height:180px;object-fit:cover;"></div>
+        <div style="border-radius:10px;overflow:hidden;"><img src="images/site-canyon.jpg" alt="The Canyon Dahab" style="width:100%;height:180px;object-fit:cover;"></div>
+        <div style="border-radius:10px;overflow:hidden;"><img src="images/site-eel-garden.jpg" alt="Eel Garden Dahab" style="width:100%;height:180px;object-fit:cover;"></div>
+        <div style="border-radius:10px;overflow:hidden;"><img src="images/site-lighthouse.jpg" alt="Lighthouse Reef Dahab" style="width:100%;height:180px;object-fit:cover;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ──────────────────────────────────────────── -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-semibold text-deep mb-4">What Our Divers Say</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <div class="testi-quote">"My first time scuba diving and I couldn't have asked for a better experience. The instructor was patient, professional, and made me feel completely safe. Life-changing."</div>
+          <div class="testi-name">— Sarah M., United Kingdom</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <div class="testi-quote">"We've dived in the Maldives, Thailand, Australia. Dahab with Nesima is in our top three. Small groups, zero pressure, total professionalism."</div>
+          <div class="testi-name">— Thomas &amp; Anna K., Germany</div>
+        </div>
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <div class="testi-quote">"Completed my Divemaster here over six weeks. The training was rigorous, the team incredibly supportive. An experience I'll never forget."</div>
+          <div class="testi-name">— Mikhail P., Russia</div>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <div style="display:inline-block;background:var(--nesima-sand);border-radius:12px;padding:20px 32px;text-align:center;">
+          <div style="font-size:14px;font-weight:600;color:var(--nesima-primary);margin-bottom:4px;">Google Reviews</div>
+          <div class="stars">★★★★★</div>
+          <div style="font-size:12px;color:#888;">Nesima Diving Center · Dahab, Egypt</div>
+          <div style="margin-top:10px;">
+            <a href="https://www.google.com/maps/place/?q=place_id:ChIJl06BANZLqxURqOMU0tZfphI" target="_blank" style="font-size:13px;color:var(--nesima-light);text-decoration:underline;">Read All Reviews</a>
+            &nbsp;&nbsp;
+            <a href="https://search.google.com/local/writereview?placeid=ChIJl06BANZLqxURqOMU0tZfphI" target="_blank" style="font-size:13px;color:var(--nesima-light);text-decoration:underline;">✍️ Leave a Review</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────────── -->
+  <section class="bg-deep py-16 px-6 text-center text-white">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-semibold mb-4" style="color:var(--nesima-gold);">Ready to Dive With Us?</h2>
+      <p class="text-lg mb-8" style="color:rgba(255,255,255,0.75);">Whether it's your first breath underwater or your thousandth dive, we have a place for you in the water.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://wa.me/201008022200?text=Hi%20Nesima%2C%20I%27d%20like%20to%20book%20a%20dive!" class="btn-gold">Book a Dive</a>
+        <a href="diving.html#pricing" class="btn-ghost">View Pricing</a>
+        <a href="index.html#contact" class="btn-ghost">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-8">
+      <div>
+        <div class="footer-brand">Nesima Diving Center</div>
+        <div style="margin-bottom:6px;">Masbat, Dahab, South Sinai, Egypt</div>
+        <div style="margin-bottom:16px;">PADI 5-Star Gold Palm Resort · CDWS Accredited</div>
+        <div style="font-size:11px;opacity:0.5;">Powered by AQUORIX — © 2026 Nesima Diving Center. All rights reserved.</div>
+      </div>
+      <div style="text-align:right;font-size:12px;">
+        <div style="margin-bottom:4px;">📧 &nbsp;info@nesimadivingcenter.com</div>
+        <div style="margin-bottom:4px;">📱 &nbsp;+20 10 08022200</div>
+        <div>🌐 &nbsp;nesimadivingcenter.com</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── SCRIPTS ─────────────────────────────────────────────────── -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('siteHeader');
+      if (window.scrollY > 60) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
